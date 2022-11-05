@@ -15,6 +15,14 @@
 .slider-container .slider {
   width: 50%;
 }
+.button-container {
+  height: 15vh;
+  align-items: flex-start;
+  margin-top: 5vh;
+}
+.button-container .btn {
+  margin: 0 1px;
+}
 .array-container {
   height: 70vh;
   width: 100%;

@@ -27,7 +27,7 @@ export default class SortingVisualizer extends React.Component {
   resetArray(bars) {
     const array = [];
     for (let i = 0; i < bars; i++) {
-      array.push(random(MIN_VALUE, MAX_VALUE));
+      array.push(Math.floor(Math.random() * (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE));
     }
     this.setState({ array });
   }
@@ -319,9 +319,4 @@ export default class SortingVisualizer extends React.Component {
       </div>
     );
   }
-}
-
-function random(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
 }

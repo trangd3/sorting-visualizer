@@ -1,3 +1,5 @@
+import { swap } from "./helper";
+
 export default function* quickSort(arr) {
   yield* sort(arr, 0, arr.length - 1);
 }
@@ -29,10 +31,4 @@ function* partition(arr, left, right) {
       yield { i, j, h1: arr[i], h2: arr[j] };
     }
   }
-}
-
-function swap(arr, i, j) {
-  const temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
 }

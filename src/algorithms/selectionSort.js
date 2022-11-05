@@ -1,3 +1,5 @@
+import { swap } from "./helper";
+
 export default function* selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let min = i;
@@ -12,10 +14,4 @@ export default function* selectionSort(arr) {
       yield { i: i, j: min, h1: arr[i], h2: arr[min] };
     }
   }
-}
-
-function swap(arr, i, j) {
-  const temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
 }

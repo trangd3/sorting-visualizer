@@ -1,3 +1,5 @@
+import { swap } from "./helper";
+
 export default function* heapSort(arr) {
   let n = arr.length;
   for (let i = n - 1; i >= 0; i--) {
@@ -27,10 +29,4 @@ function* heapify(arr, i, n) {
     yield { i: i, j: maxChild, h1: arr[i], h2: arr[maxChild] };
     yield* heapify(arr, maxChild, n);
   }
-}
-
-function swap(arr, i, j) {
-  const temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
 }
